@@ -12,8 +12,8 @@ use Filament\Tables\Table;
 use Schmeits\FilamentCharacterCounter\Forms\Components\Textarea as ComponentsTextarea;
 use SmartCms\Core\Services\Schema;
 use SmartCms\Core\Services\TableSchema;
-use SmartCms\Reviews\Models\ProductReview;
 use SmartCms\Reviews\Admin\Resources\ProductReviewResource\Pages as Pages;
+use SmartCms\Reviews\Models\ProductReview;
 use SmartCms\Store\Models\Product;
 
 class ProductReviewResource extends Resource

@@ -7,8 +7,8 @@ use SmartCms\Store\Repositories\Product\ProductDto;
 
 class ProductTransform
 {
-   public function __invoke(ProductDto $dto): void
-   {
-      $dto->setExtraValue('rating', ProductReviewRepository::make()->getRating($dto->id));
-   }
+    public function __invoke(ProductDto $dto): void
+    {
+        $dto->setExtraValue('rating', ProductReviewRepository::make()->getRating($dto->id));
+    }
 }
