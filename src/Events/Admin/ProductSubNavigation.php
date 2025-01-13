@@ -6,8 +6,8 @@ use SmartCms\Reviews\Admin\Pages\EditReviews;
 
 class ProductSubNavigation
 {
-   public function __invoke(array &$pages)
-   {
-      $pages[] = EditReviews::class;
-   }
+    public function __invoke(array &$pages)
+    {
+        $pages[] = EditReviews::class;
+    }
 }

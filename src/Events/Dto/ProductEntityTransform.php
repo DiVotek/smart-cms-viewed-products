@@ -7,9 +7,9 @@ use SmartCms\Store\Repositories\Product\ProductEntityDto;
 
 class ProductEntityTransform
 {
-   public function __invoke(ProductEntityDto $dto): void
-   {
-      $dto->setExtraValue('rating', ProductReviewRepository::make()->getRating($dto->id));
-      $dto->setExtraValue('reviews', ProductReviewRepository::make()->findByProductId($dto->id));
-   }
+    public function __invoke(ProductEntityDto $dto): void
+    {
+        $dto->setExtraValue('rating', ProductReviewRepository::make()->getRating($dto->id));
+        $dto->setExtraValue('reviews', ProductReviewRepository::make()->findByProductId($dto->id));
+    }
 }

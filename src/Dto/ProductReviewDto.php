@@ -8,19 +8,19 @@ use SmartCms\Core\Traits\Dto\AsDto;
 
 class ProductReviewDto implements DtoInterface
 {
-   use AsDto;
+    use AsDto;
 
-   public function __construct(public string $name, public ?string $email, public string $review, public int $rating, public ?string $image, public DateTime $createdAt) {}
+    public function __construct(public string $name, public ?string $email, public string $review, public int $rating, public ?string $image, public DateTime $createdAt) {}
 
-   public function toArray(): array
-   {
-      return [
-         'name' => $this->name,
-         'email' => $this->email ?? '',
-         'review' => $this->review,
-         'rating' => $this->rating,
-         'image' => $this->image ?? '',
-         'created_at' => $this->transformDate($this->createdAt),
-      ];
-   }
+    public function toArray(): array
+    {
+        return [
+            'name' => $this->name,
+            'email' => $this->email ?? '',
+            'review' => $this->review,
+            'rating' => $this->rating,
+            'image' => $this->image ?? '',
+            'created_at' => $this->transformDate($this->createdAt),
+        ];
+    }
 }
