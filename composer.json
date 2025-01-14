@@ -1,13 +1,13 @@
 {
-    "name": "smart-cms/reviews",
+    "name": "smart-cms/viewed_products",
     "version": "1.0.0",
-    "description": "This is reviews package for smart-cms/store",
+    "description": "This is viewed products package for smart-cms/store",
     "keywords": [
         "SmartCms",
         "laravel",
-        "reviews"
+        "Viewed products"
     ],
-    "homepage": "https://github.com/smart-cms/reviews",
+    "homepage": "https://github.com/smart-cms/viewed_products",
     "license": "MIT",
     "authors": [
         {
@@ -36,13 +36,13 @@
     },
     "autoload": {
         "psr-4": {
-            "SmartCms\\Reviews\\": "src/",
-            "SmartCms\\Reviews\\Database\\Factories\\": "database/factories/"
+            "SmartCms\\Viewed_products\\": "src/",
+            "SmartCms\\Viewed_products\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SmartCms\\Reviews\\Tests\\": "tests/",
+            "SmartCms\\Viewed_products\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -64,13 +64,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SmartCms\\Reviews\\ReviewsServiceProvider"
+                "SmartCms\\Viewed_products\\ViewsServiceProvider"
             ],
             "aliases": {
-                "Reviews": "SmartCms\\Reviews\\Facades\\Reviews"
+                "Viewed_products": "SmartCms\\Viewed_products\\Facades\\Views"
             }
         }
     },
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/DiVotek/smart_cms_store.git"
+        }
+    ],
     "prefer-stable": true
 }

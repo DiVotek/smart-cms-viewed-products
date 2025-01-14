@@ -1,15 +1,14 @@
 <?php
 
-namespace SmartCms\Reviews\Events\Dto;
+namespace SmartCms\Viewed_products\Events\Dto;
 
-use SmartCms\Reviews\Repositories\ProductReviewRepository;
-use SmartCms\Store\Repositories\Product\ProductEntityDto;
+use SmartCms\Store\Models\Product;
+use SmartCms\Viewed_products\Services\ViewedProductService;
 
 class ProductEntityTransform
 {
-    public function __invoke(ProductEntityDto $dto): void
+    public function __invoke(Product $entity): void
     {
-        $dto->setExtraValue('rating', ProductReviewRepository::make()->getRating($dto->id));
-        $dto->setExtraValue('reviews', ProductReviewRepository::make()->findByProductId($dto->id));
+        ViewedProductService::add($entity->id);
     }
 }

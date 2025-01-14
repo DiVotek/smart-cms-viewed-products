@@ -1,18 +1,18 @@
-# This is review package for smart-cms/store.
+# This is viewed products package for smart-cms/store.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/smart-cms/reviews.svg?style=flat-square)](https://packagist.org/packages/smart-cms/reviews)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/smart-cms/reviews/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/smart-cms/reviews/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/smart-cms/reviews/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/smart-cms/reviews/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/smart-cms/reviews.svg?style=flat-square)](https://packagist.org/packages/smart-cms/reviews)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/smart-cms/viewed_products.svg?style=flat-square)](https://packagist.org/packages/smart-cms/viewed_products)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/smart-cms/viewed_products/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/smart-cms/viewed_products/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/smart-cms/viewed_products/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/smart-cms/viewed_products/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/smart-cms/viewed_products.svg?style=flat-square)](https://packagist.org/packages/smart-cms/viewed_products)
 
-Package provides reviews functionality for smart-cms/store.
+Package provides viewed products functionality for smart-cms/store.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require smart-cms/reviews
+composer require smart-cms/viewed_products
 ```
 
 ## Testing
