@@ -2,8 +2,8 @@
 
 namespace SmartCms\Viewed_products\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Orchestra\Testbench\TestCase as Orchestra;
 use SmartCms\Viewed_products\ViewsServiceProvider;
 
 class TestCase extends Orchestra

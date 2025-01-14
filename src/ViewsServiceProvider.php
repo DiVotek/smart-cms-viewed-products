@@ -4,7 +4,6 @@ namespace SmartCms\Viewed_products;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use SmartCms\Viewed_products\Events\Dto\CategoryEntityTransform;
 use SmartCms\Viewed_products\Events\Dto\ProductEntityTransform;
 
 class ViewsServiceProvider extends ServiceProvider
