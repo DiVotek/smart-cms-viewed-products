@@ -3,7 +3,6 @@
 namespace SmartCms\Viewed_products\Events\Dto;
 
 use SmartCms\Store\Repositories\Category\CategoryDto;
-use SmartCms\Store\Repositories\Product\ProductDto;
 use SmartCms\Viewed_products\Services\ViewedProductService;
 
 class CategoryTransform
