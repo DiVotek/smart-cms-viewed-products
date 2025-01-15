@@ -38,5 +38,5 @@ it('add two product to session', function () {
     $transformer($entity1);
     $transformer($entity2);
 
-    expect(ViewedProductService::getViewedProductsDTOs())->toHaveCount(2);
+    expect(ViewedProductService::get())->toHaveCount(2);
 });
