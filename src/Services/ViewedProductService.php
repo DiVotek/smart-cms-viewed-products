@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCms\Viewed_products\Services;
+namespace SmartCms\ViewedProducts\Services;
 
 use Illuminate\Support\Facades\Session;
 use SmartCms\Store\Repositories\Product\ProductRepository;

@@ -1,12 +1,12 @@
 <?php
 
-namespace SmartCms\Viewed_products;
+namespace SmartCms\ViewedProducts;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use SmartCms\Viewed_products\Events\Dto\CategoryTransform;
-use SmartCms\Viewed_products\Events\Dto\ProductEntityTransform;
-use SmartCms\Viewed_products\Events\Dto\ProductTransform;
+use SmartCms\ViewedProducts\Events\Dto\CategoryTransform;
+use SmartCms\ViewedProducts\Events\Dto\ProductEntityTransform;
+use SmartCms\ViewedProducts\Events\Dto\ProductTransform;
 
 class ViewsServiceProvider extends ServiceProvider
 {
@@ -23,6 +23,6 @@ class ViewsServiceProvider extends ServiceProvider
     {
         Event::listen('cms.product.view', ProductEntityTransform::class);
         Event::listen('cms.product.transform', ProductTransform::class);
-        Event::listen('cms.product.transform', CategoryTransform::class);
+        Event::listen('cms.category.transform', CategoryTransform::class);
     }
 }

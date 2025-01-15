@@ -3,8 +3,8 @@
 namespace Tests\Unit;
 
 use SmartCms\Store\Database\Factories\ProductFactory;
-use SmartCms\Viewed_products\Events\Dto\ProductEntityTransform;
-use SmartCms\Viewed_products\Services\ViewedProductService;
+use SmartCms\ViewedProducts\Events\Dto\ProductEntityTransform;
+use SmartCms\ViewedProducts\Services\ViewedProductService;
 
 it('test empty session', function () {
     expect(ViewedProductService::get())->toHaveCount(0);

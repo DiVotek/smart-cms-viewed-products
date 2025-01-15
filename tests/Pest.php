@@ -1,5 +1,5 @@
 <?php
 
-use SmartCms\Viewed_products\Tests\TestCase;
+use SmartCms\ViewedProducts\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

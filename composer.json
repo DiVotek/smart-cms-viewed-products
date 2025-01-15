@@ -36,13 +36,13 @@
     },
     "autoload": {
         "psr-4": {
-            "SmartCms\\Viewed_products\\": "src/",
-            "SmartCms\\Viewed_products\\Database\\Factories\\": "database/factories/"
+            "SmartCms\\ViewedProducts\\": "src/",
+            "SmartCms\\ViewedProducts\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SmartCms\\Viewed_products\\Tests\\": "tests/",
+            "SmartCms\\ViewedProducts\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -64,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SmartCms\\Viewed_products\\ViewsServiceProvider"
+                "SmartCms\\ViewedProducts\\ViewsServiceProvider"
             ],
             "aliases": {
-                "Viewed_products": "SmartCms\\Viewed_products\\Facades\\Views"
+                "ViewedProducts": "SmartCms\\ViewedProducts\\Facades\\Views"
             }
         }
     },

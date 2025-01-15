@@ -1,9 +1,9 @@
 <?php
 
-namespace SmartCms\Viewed_products\Events\Dto;
+namespace SmartCms\ViewedProducts\Events\Dto;
 
 use SmartCms\Store\Repositories\Product\ProductDto;
-use SmartCms\Viewed_products\Services\ViewedProductService;
+use SmartCms\ViewedProducts\Services\ViewedProductService;
 
 class ProductTransform
 {

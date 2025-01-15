@@ -1,5 +1,5 @@
 <?php
 
-namespace SmartCms\Viewed_products;
+namespace SmartCms\ViewedProducts;
 
 class Views {}

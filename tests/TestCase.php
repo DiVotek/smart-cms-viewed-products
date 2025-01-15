@@ -1,10 +1,10 @@
 <?php
 
-namespace SmartCms\Viewed_products\Tests;
+namespace SmartCms\ViewedProducts\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use SmartCms\Viewed_products\ViewsServiceProvider;
+use SmartCms\ViewedProducts\ViewsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -16,7 +16,7 @@ class TestCase extends Orchestra
         $this->loadMigrationsFrom(__DIR__.'/../vendor/smart-cms/core/database/migrations');
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'SmartCms\\Viewed_products\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'SmartCms\\ViewedProducts\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

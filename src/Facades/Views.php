@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCms\Viewed_products\Facades;
+namespace SmartCms\ViewedProducts\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class Views extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \SmartCms\Viewed_products\Views::class;
+        return \SmartCms\ViewedProducts\Views::class;
     }
 }
