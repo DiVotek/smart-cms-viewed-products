@@ -7,8 +7,8 @@ use SmartCms\ViewedProducts\Services\ViewedProductService;
 
 class ProductEntityTransform
 {
-   public function __invoke(ProductEntityDto $dto): void
-   {
-      $dto->setExtraValue('viewed_products', ViewedProductService::getViewedProductsDTOs());
-   }
+    public function __invoke(ProductEntityDto $dto): void
+    {
+        $dto->setExtraValue('viewed_products', ViewedProductService::getViewedProductsDTOs());
+    }
 }
