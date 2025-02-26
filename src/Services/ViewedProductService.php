@@ -14,12 +14,12 @@ class ViewedProductService
 
     public static function getViewedProductsDTOs(): array
     {
-        return ProductRepository::make()->findMultiple(Session::get('viewed_products', []));
+        return ProductRepository::make()->findMultiple(self::get());
     }
 
-    public static function add($id)
+    public static function add(int $id)
     {
-        $viewedProducts = Session::get('viewed_products', []);
+        $viewedProducts = self::get();
         if (! in_array($id, $viewedProducts)) {
             $viewedProducts[] = $id;
 

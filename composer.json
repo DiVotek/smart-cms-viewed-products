@@ -1,5 +1,5 @@
 {
-    "name": "smart-cms/viewed_products",
+    "name": "smart-cms/viewed-products",
     "version": "1.0.0",
     "description": "This is viewed products package for smart-cms/store",
     "keywords": [
@@ -7,7 +7,7 @@
         "laravel",
         "Viewed products"
     ],
-    "homepage": "https://github.com/smart-cms/viewed_products",
+    "homepage": "https://github.com/DiVotek/smart-cms-viewed-products",
     "license": "MIT",
     "authors": [
         {
@@ -47,8 +47,6 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
@@ -64,11 +62,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SmartCms\\ViewedProducts\\ViewsServiceProvider"
-            ],
-            "aliases": {
-                "ViewedProducts": "SmartCms\\ViewedProducts\\Facades\\Views"
-            }
+                "SmartCms\\ViewedProducts\\ViewedProductsServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
