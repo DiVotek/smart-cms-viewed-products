@@ -4,12 +4,11 @@ namespace SmartCms\ViewedProducts\Services;
 
 use Illuminate\Support\Facades\Session;
 use SmartCms\Store\Models\Product;
-use SmartCms\Store\Repositories\Product\ProductRepository;
 use SmartCms\Store\Resources\Product\ProductResource;
 
 class ViewedProductService
 {
-    static $sessionKey = 'smart_cms.viewed_products';
+    public static $sessionKey = 'smart_cms.viewed_products';
 
     public static function get(): array
     {
