@@ -4,8 +4,9 @@ namespace SmartCms\ViewedProducts;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use SmartCms\ViewedProducts\Events\CategoryEntityTransform;
-use SmartCms\ViewedProducts\Events\ProductEntityTransform;
+use SmartCms\Store\Resources\Category\CategoryEntityResource;
+use SmartCms\Store\Resources\Product\ProductEntityResource;
+use SmartCms\ViewedProducts\Events\EntityTransform;
 use SmartCms\ViewedProducts\Events\ViewProduct;
 
 class ViewedProductsServiceProvider extends ServiceProvider
@@ -15,7 +16,7 @@ class ViewedProductsServiceProvider extends ServiceProvider
     public function boot()
     {
         Event::listen('cms.product.view', ViewProduct::class);
-        Event::listen('cms.product-entity.transform', ProductEntityTransform::class);
-        Event::listen('cms.category-entity.transform', CategoryEntityTransform::class);
+        ProductEntityResource::registerHook('transform.data', EntityTransform::class);
+        CategoryEntityResource::registerHook('transform.data', EntityTransform::class);
     }
 }

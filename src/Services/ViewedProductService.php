@@ -3,18 +3,24 @@
 namespace SmartCms\ViewedProducts\Services;
 
 use Illuminate\Support\Facades\Session;
+use SmartCms\Store\Models\Product;
 use SmartCms\Store\Repositories\Product\ProductRepository;
+use SmartCms\Store\Resources\Product\ProductResource;
 
 class ViewedProductService
 {
+    static $sessionKey = 'smart_cms.viewed_products';
+
     public static function get(): array
     {
-        return Session::get('viewed_products', []);
+        return Session::get(self::$sessionKey, []);
     }
 
-    public static function getViewedProductsDTOs(): array
+    public static function getViewedProducts(): array
     {
-        return ProductRepository::make()->findMultiple(self::get());
+        return Product::query()->whereIn('id', self::get())->get()->map(function ($el) {
+            return ProductResource::make($el)->get();
+        })->toArray();
     }
 
     public static function add(int $id)
@@ -23,7 +29,7 @@ class ViewedProductService
         if (! in_array($id, $viewedProducts)) {
             $viewedProducts[] = $id;
 
-            Session::put('viewed_products', $viewedProducts);
+            Session::put(self::$sessionKey, $viewedProducts);
         }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use Illuminate\Support\Facades\Event;
 use SmartCms\Store\Database\Factories\ProductFactory;
 use SmartCms\ViewedProducts\Events\Dto\ProductEntityTransform;
 use SmartCms\ViewedProducts\Services\ViewedProductService;
@@ -12,31 +13,24 @@ it('test empty session', function () {
 
 it('add viewed product to session', function () {
     $entity = ProductFactory::new()->state(['status' => 1])->create();
-    $transformer = new ProductEntityTransform;
-    $transformer($entity);
+    Event::dispatch('cms.product.view', $entity);
 
     expect(ViewedProductService::get())->toHaveCount(1);
 });
 
 it('add duplicate product to session', function () {
     $entity = \SmartCms\Store\Database\Factories\ProductFactory::new()->state(['status' => 1])->create();
-
-    $transformer = new ProductEntityTransform;
-
-    $transformer($entity);
-    $transformer($entity);
+    Event::dispatch('cms.product.view', $entity);
+    Event::dispatch('cms.product.view', $entity);
 
     expect(ViewedProductService::get())->toHaveCount(1);
 });
 
-it('add two product to session', function () {
-    $entity1 = \SmartCms\Store\Database\Factories\ProductFactory::new()->state(['status' => 1])->create();
-    $entity2 = \SmartCms\Store\Database\Factories\ProductFactory::new()->state(['status' => 1])->create();
+it('add some products to session', function () {
+    for ($i = 0; $i < 10; $i++) {
+        $entity = \SmartCms\Store\Database\Factories\ProductFactory::new()->state(['status' => 1])->create();
+        Event::dispatch('cms.product.view', $entity);
+    }
 
-    $transformer = new ProductEntityTransform;
-
-    $transformer($entity1);
-    $transformer($entity2);
-
-    expect(ViewedProductService::get())->toHaveCount(2);
+    expect(ViewedProductService::get())->toHaveCount(10);
 });
