@@ -1,6 +1,5 @@
 {
     "name": "smart-cms/viewed-products",
-    "version": "1.0.0",
     "description": "This is viewed products package for smart-cms/store",
     "keywords": [
         "SmartCms",

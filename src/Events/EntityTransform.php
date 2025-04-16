@@ -6,7 +6,7 @@ use SmartCms\ViewedProducts\Services\ViewedProductService;
 
 class EntityTransform
 {
-    public function __invoke($dto): void
+    public function __invoke(&$dto): void
     {
         $dto['viewed_products'] = ViewedProductService::getViewedProducts();
     }
